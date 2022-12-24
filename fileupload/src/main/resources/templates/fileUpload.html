@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>파일업로드 구현</h1>
+	<form method="post" action="/file" enctype="multipart/form-data">
+		<h4>파일 하나만 업로드하기</h4>
+		<input type="file" name="file">
+		<hr>
+		
+		<h4>파일 여러개 업로드하기</h4>
+		<input type="file" multiple="multiple" name="files">
+		<br><br><hr>
+		<input type="submit" value="업로드하기">
+	</form>
+</body>
+</html>
