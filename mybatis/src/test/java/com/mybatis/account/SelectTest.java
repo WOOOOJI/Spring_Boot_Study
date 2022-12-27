@@ -8,17 +8,16 @@ import com.mybatis.dto.AccountDTO;
 import com.mybatis.service.AccountService;
 
 @SpringBootTest
-class InsertTest {
+class SelectTest {
 	
 	@Autowired
 	AccountService service;
 	
 	@Test
 	void contextLoads() {
-		AccountDTO dto = new AccountDTO("zathy122", "1aaas22", "woojin yeon", "010-1112-2211", "zathy1225@gmail.com");
 		try {
-			service.register(dto);
-			System.out.println("유저등록 성공");
+			AccountDTO dto = service.get("아이디><");
+			System.out.println(dto);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
