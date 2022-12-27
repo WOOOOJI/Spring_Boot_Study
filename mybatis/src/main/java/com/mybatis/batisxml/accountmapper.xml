@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.mapper.AccountMapper">
+	
+	<insert id="insert">
+		INSERT INTO account VALUES(#{userid}, #{userpwd}, #{username}, #{usertel}, #{useremail})
+	</insert>
+	
+	<update id="update">
+		UPDATE account SET userpwd=#{userpwd}, username=#{username}, usertel=#{usertel}, useremail=#{useremail} WHERE userid=#{userid}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM account WHERE userid LIKE #{userid}
+	</delete>
+	
+	<select id="select" resultType="AccountDTO">
+		SELECT * FROM account WHERE userid LIKE #{userid}
+	</select>
+	
+	<select id="selectAll" resultType="AccountDTO">
+		SELECT * FROM account
+	</select>
+	
+</mapper>
