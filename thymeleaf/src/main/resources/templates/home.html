@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>데이터 마이바티스로 가져와서 Thymeleaf로 뿌리기</h1>
+	<div>
+		<ul>
+			<li th:value="${account.userid}" th:text="${account.userid}"></li>
+			<li th:text="${account.userpwd}"></li>
+			<li th:text="${account.username}"></li>
+			<li th:text="${account.usertel}"></li>
+			<li th:text="${account.useremail}"></li>
+		</ul>
+	</div>
+</body>
+</html>
