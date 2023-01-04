@@ -3,19 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
 </head>
 <body>
 	<h1>데이터 마이바티스로 가져와서 Thymeleaf로 뿌리기</h1>
 	<div>
-		<ul>
-			<li th:value="${account.userid}" th:text="${account.userid}"></li>
-			<li th:text="${account.userpwd}"></li>
-			<li th:text="${account.username}"></li>
-			<li th:text="${account.usertel}"></li>
-			<li th:text="${account.useremail}"></li>
-		</ul>
-		
-		<a href="/loginpage">로그인</a>
+		<a href="/loginpage" id="alink">로그인</a>
 	</div>
 </body>
 </html>
