@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+<script>
+
+	function display(time){
+		$('#time').text(time);
+	}
+
+
+	function getTime(){
+		$.ajax({
+			url:'[[@{/time}]]',
+			success:function(time){
+				display(time);
+			}
+		});
+	}
+
+
+	$(document).ready(function(){
+		setInterval(function(){
+			getTime();
+		}, 1000)
+	});
+</script>
+
+
+</head>
+<body>
+	<div>여기는 변경되지 않습니다.</div>
+	<div id="time"></div>
+	<div></div>
+</body>
+</html>
